@@ -1,0 +1,12 @@
+{
+  "address": "footer.address",
+  "office": "footer.office",
+  "contact": {
+    "email": "footer.contact.email",
+    "number": "footer.contact.number"
+  },
+  "social": {
+    "instagram": "footer.social.instagram",
+    "telegram": "footer.social.telegram"
+  }
+}

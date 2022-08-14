@@ -1,0 +1,70 @@
+{
+  "nav" : {
+    "home" : "Главный",
+    "about" : "О нас",
+    "portfolio" : "Портфолио",
+    "news" : "Новости"
+  },
+  "home" : {
+    "products" : "Наши продукты",
+    "beautiful" : "красивые"
+  },
+  "services" : {
+    "web" : {
+      "name" : "Веб разработка",
+      "description" : "Креатив веб сайты...",
+      "bg" : "#202020"
+    },
+
+    "design" : {
+      "name" : "График дизайн",
+      "description" : "Лого брандинг, Social media designs..",
+      "bg" : "#151515"
+    },
+
+    "smm" : {
+      "name" : "СММ",
+      "description" : "Телеграм бот, Интсаграм...",
+      "bg" : "#303030"
+    },
+
+    "more" : {
+      "name" : "Дальше",
+      "description" : "Другие...",
+      "bg" : "#404040"
+    }
+  },
+  "partners" : {
+    "impact" : {
+      "name" : "Иппакт LC",
+      "description" : "Partners Group is a global private markets investment manager "
+    },
+
+    "khwarizmi" : {
+      "name" : "Mukhammad Al-Khwarizmi",
+      "description" : "Partners Group is a global private markets investment manager "
+    },
+
+    "uchbaqaloq" : {
+      "name" : "Uchbaqaloq kafe",
+      "description" : "Partners Group is a global private markets investment manager "
+    },
+
+    "teded" : {
+      "name" : "TedEd Club",
+      "description" : "Partners Group is a global private markets investment manager "
+    }
+  },
+  "footer": {
+    "address": "Mukhammad Al-Khwarizmi",
+    "office": "New office (In Shaa Allah)",
+    "contact" : {
+      "email": "gdservices gmail.com",
+      "number": "+998 99 899 89 98"
+    },
+    "social" : {
+      "instagram" : "https://www.instagram.com/gdteamuz/",
+      "telegram" : "https://t.me/gdteamuz"
+    }
+  }
+}

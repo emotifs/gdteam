@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "services.design.name",
+    "description": "services.design.description",
+    "bg": "services.design.bg"
+  },
+
+  {
+    "id": 2,
+    "name": "services.web.name",
+    "description": "services.web.description",
+    "bg": "services.web.bg"
+  },
+
+  {
+    "id": 3,
+    "name": "services.smm.name",
+    "description": "services.smm.description",
+    "bg": "services.smm.bg"
+  },
+
+  {
+    "id": 4,
+    "name": "services.more.name",
+    "description": "services.more.description",
+    "bg": "services.more.bg"
+  }
+]

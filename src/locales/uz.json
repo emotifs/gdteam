@@ -1,0 +1,70 @@
+{
+  "nav" : {
+    "home" : "Asosiy",
+    "about" : "Haqimizda",
+    "portfolio" : "Proyektlar",
+    "news" : "Yangiliklar"
+  },
+  "home" : {
+    "products" : "Bizning products",
+    "beautiful" : "chiroyli"
+  },
+  "services" : {
+    "web" : {
+      "name" : "Web saytlar",
+      "description" : "Kreativ veb-saytlar...",
+      "bg" : "#202020"
+    },
+
+    "design" : {
+      "name" : "Grafik dizaynlar",
+      "description" : "Logo branding, Social media designs..",
+      "bg" : "#151515"
+    },
+
+    "smm" : {
+      "name" : "SMM",
+      "description" : "Telegram bot, Instagram...",
+      "bg" : "#303030"
+    },
+
+    "more" : {
+      "name" : "Boshqalar",
+      "description" : "Boshqalar...",
+      "bg" : "#404040"
+    }
+  },
+  "partners" : {
+    "impact" : {
+      "name" : "Impact LC",
+      "description" : "Partners Group is a global private markets investment manager "
+    },
+
+    "khwarizmi" : {
+      "name" : "Mukhammad Al-Khwarizmi",
+      "description" : "Partners Group is a global private markets investment manager "
+    },
+
+    "uchbaqaloq" : {
+      "name" : "Uchbaqaloq kafe",
+      "description" : "Partners Group is a global private markets investment manager "
+    },
+
+    "teded" : {
+      "name" : "TedEd Club",
+      "description" : "Partners Group is a global private markets investment manager "
+    }
+  },
+  "footer": {
+    "address": "Mukhammad Al-Khwarizmi",
+    "office": "New office (In Shaa Allah)",
+    "contact" : {
+      "email": "gdservices gmail.com",
+      "number": "+998 99 899 89 98"
+    },
+    "social" : {
+      "instagram" : "https://www.instagram.com/gdteamuz/",
+      "telegram" : "https://t.me/gdteamuz"
+    }
+  }
+}

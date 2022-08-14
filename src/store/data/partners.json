@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "partners.impact.name",
+    "description": "partners.impact.description"
+  },
+
+  {
+    "id": 2,
+    "name": "partners.khwarizmi.name",
+    "description": "partners.khwarizmi.description"
+  },
+
+  {
+    "id": 3,
+    "name": "partners.uchbaqaloq.name",
+    "description": "partners.uchbaqaloq.description"
+  },
+
+  {
+    "id": 4,
+    "name": "partners.teded.name",
+    "description": "partners.teded.description"
+  }
+]
