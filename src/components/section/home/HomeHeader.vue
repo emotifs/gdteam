@@ -1,6 +1,6 @@
 <template>
-  <section class="pl-5 mt-24 md:mt-48 lg:mt-48 sm:mt-36 h-screen absolute">
-    <h1 class="font-semi-bold tracking-wider mb-5 header-text" style="overflow-y: hidden" data-aos="zoom-out-down" data-aos-delay="200"  data-aos-duration="1500">{{ $t("home.products") }}</h1>
+  <section class="pl-4 mt-24 md:mt-48 lg:mt-48 sm:mt-36 h-screen relative bg-transparent z-0">
+    <h1 class="font-semi-bold tracking-wider mb-5 header-text"  data-aos="zoom-out-down" data-aos-delay="200"  data-aos-duration="1500">{{ $t("home.products") }}</h1>
     <router-link to="/portfolio" class="hover:text-black text-black bg-white px-4 py-3 h-5 text-xl" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">{{ $t("home.beautiful") }} >
     </router-link>
   </section>
@@ -31,7 +31,7 @@ export default {
 
   @media(max-width: 767px){
     .header-text{
-      font-size: 64px
+      font-size: 70px
     }
   }
 </style>

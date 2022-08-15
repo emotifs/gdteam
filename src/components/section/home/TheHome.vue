@@ -1,8 +1,8 @@
 <template>
   <div class="bg-black text-white" >
-    <section class="w-full bg-home-bg bg-cover text-white pt-40 h-screen" style="background-position: top">
-      <HomeHeader/>
-      <img @click="scroll('services')" src="../../../assets/mouse.png" class="w-8 absolute left-1/2 bottom-10 hover:cursor-pointer" alt="">
+    <section class="w-full bg-home-bg bg-cover text-white pt-40 h-screen z-50">
+        <HomeHeader/>
+      <div @click="scroll('services')" class="hover:cursor-pointer icon-scroll"></div>
     </section>
     <HomeServices/>
     <HomePartners />
@@ -28,4 +28,42 @@ export default {
 </script>
 
 <style scoped>
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  bottom: 30px;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 </style>

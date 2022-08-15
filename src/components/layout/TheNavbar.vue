@@ -21,8 +21,8 @@
           <option class="text-black" value="en">EN</option>
         </select>
       </div>
-      <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center w-screen">
-        <ul class="flex flex-col lg:flex-row list-none lg:mx-auto ">
+      <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center w-screen ">
+        <ul class="flex flex-col lg:flex-row list-none lg:mx-auto bg-black lg:bg-transparent z-50">
           <li class="nav-item mx-5 py-2">
             <router-link to="/"
                          class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline">
@@ -48,7 +48,7 @@
 
           <li class="nav-item mx-5 py-2">
             <router-link to="/news"
-                         class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                         class="px-3 py-2 flex items-center text-xs  uppercase font-bold leading-snug text-white hover:opacity-75">
               <span class="ml-2" style="font-size: 18px">{{ $t('nav.news') }}</span>
             </router-link>
           </li>

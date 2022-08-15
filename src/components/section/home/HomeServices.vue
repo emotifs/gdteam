@@ -11,9 +11,9 @@
             </a>
             <div class="px-5 py-4 absolute bottom-0">
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $t(serv.name) }}</h5>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">{{ $t(serv.name) }}</h5>
               </a>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $t(serv.description) }}</p>
+              <p class="mb-3 font-normal text-white">{{ $t(serv.description) }}</p>
             </div>
           </div>
         </div>
@@ -24,9 +24,9 @@
             </a>
             <div class="px-5 py-4 absolute bottom-0">
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $t(serv.name) }}</h5>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{{ $t(serv.name) }}</h5>
               </a>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $t(serv.description) }}</p>
+              <p class="mb-3 font-normal text-white">{{ $t(serv.description) }}</p>
             </div>
           </div>
         </div>
