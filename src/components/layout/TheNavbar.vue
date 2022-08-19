@@ -1,5 +1,5 @@
 <template>
-  <nav class="relative flex flex-wrap bg-black items-center justify-between px-2 py-3 mb-3 w-full mt-3" data-aos="fade-right" data-aos-duration="1500">
+  <nav class="relative flex flex-wrap bg-black items-center justify-between px-2 pb-3 mb-3 w-full pt-8">
     <div class="w-full mx-auto flex flex-wrap items-center justify-between">
       <div class="w-full relative flex justify-between lg:w-auto  px-2 lg:static lg:block lg:justify-start">
         <button

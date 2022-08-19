@@ -5,7 +5,7 @@
 
       <div class="sm:w-max md:w-1/2 lg:w-1/4" v-for="(serv, idx) in services" :key="serv.id">
         <div v-if="idx % 2 === 0" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-          <div class="shadow-md relative" :style="{'background-color' : $t(serv.bg), 'height': '500px'}">
+          <div class="shadow-md relative servbg" :style="{'background-image' : `url(${require('.' + $t(serv.bg))})`, 'background-size' : 'cover', 'height': '500px'}">
             <a href="#">
               <img class="rounded-t-lg" src="#" alt=""/>
             </a>
@@ -18,8 +18,8 @@
           </div>
         </div>
         <div v-else data-aos="fade-down" data-aos-duration="2000" data-aos-delay="500">
-          <div class="shadow-md relative" :style="{'background-color' : $t(serv.bg), 'height': '500px'}">
-            <a href="#">
+          <div class="shadow-md relative servbg" :style="{'background-image' : `url(${require('.' + $t(serv.bg))})`, 'background-size' : 'cover', 'height': '500px'}">
+          <a href="#">
               <img class="rounded-t-lg" src="#" alt=""/>
             </a>
             <div class="px-5 py-4 absolute bottom-0">
@@ -53,5 +53,11 @@ export default {
 </script>
 
 <style scoped>
-
+  .servbg{
+    filter: grayscale(100%);
+  }
+  .servbg:hover{
+    filter: grayscale(0%);
+    transition: 0.4s;
+  }
 </style>

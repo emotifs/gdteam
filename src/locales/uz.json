@@ -13,25 +13,21 @@
     "web" : {
       "name" : "Web saytlar",
       "description" : "Kreativ veb-saytlar...",
-      "bg" : "#202020"
     },
 
     "design" : {
       "name" : "Grafik dizaynlar",
       "description" : "Logo branding, Social media designs..",
-      "bg" : "#151515"
     },
 
     "smm" : {
       "name" : "SMM",
       "description" : "Telegram bot, Instagram...",
-      "bg" : "#303030"
     },
 
     "more" : {
       "name" : "Boshqalar",
       "description" : "Boshqalar...",
-      "bg" : "#404040"
     }
   },
   "partners" : {
@@ -66,5 +62,12 @@
       "instagram" : "https://www.instagram.com/gdteamuz/",
       "telegram" : "https://t.me/gdteamuz"
     }
+  },
+  "about": {
+    "header" : "Biz haqimizda",
+    "info" : "Lorem ipsum - dolor sit amet, consectetur adipiscing elit ut aliquam,\n\npurus sit amet luctus venenatis,ipsum dolor sit amet, consectetur ingilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra"
+  },
+  "portfolio" : {
+    "title" : "Portfoliyo"
   }
 }

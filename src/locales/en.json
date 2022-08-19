@@ -13,22 +13,22 @@
     "web": {
       "name": "Web Development",
       "description": "Creative web sites...",
-      "bg": "#202020"
+      "bg" : "/assets/web.png"
     },
     "design": {
       "name": "Graphic Design",
       "description": "Logo Branding, Social media designs..",
-      "bg": "#151515"
+      "bg" : "/assets/design.png"
     },
     "smm": {
       "name": "Social media marketing",
       "description": "Telegram bot, instagram...",
-      "bg": "#303030"
+      "bg" : "/assets/smm.png"
     },
     "more": {
       "name": "More",
       "description": "Others...",
-      "bg": "#404040"
+      "bg" : "/assets/others.png"
     }
   },
   "partners": {
@@ -59,6 +59,49 @@
     "social" : {
       "instagram" : "https://www.instagram.com/gdteamuz/",
       "telegram" : "https://t.me/gdteamuz"
+    }
+  },
+  "about": {
+    "header" : "About us",
+    "info" : "Lorem ipsum - dolor sit amet, consectetur adipiscing elit ut aliquam,\n\npurus sit amet luctus venenatis,ipsum dolor sit amet, consectetur ingilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra"
+  },
+  "portfolio" : {
+    "title" : "Portfolio",
+    "1" : {
+      "id" : 1,
+      "url" : "/assets/1.png"
+    },
+    "2" : {
+      "id" : 2,
+      "url" : "/assets/2.png"
+    },
+    "3" : {
+      "id" : 3,
+      "url" : "/assets/3.png"
+    },
+    "4" : {
+      "id" : 4,
+      "url" : "/assets/4.png"
+    },
+    "5" : {
+      "id" : 5,
+      "url" : "/assets/5.png"
+    },
+    "6" : {
+      "id" : 6,
+      "url" : "/assets/6.png"
+    },
+    "7" : {
+      "id" : 7,
+      "url" : "/assets/7.png"
+    },
+    "8" : {
+      "id" : 8,
+      "url" : "/assets/8.png"
+    },
+    "9" : {
+      "id" : 9,
+      "url" : "/assets/9.png"
     }
   }
 }

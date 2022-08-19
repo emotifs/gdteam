@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage : {
-        'home-bg' : "url('/src/assets/home.webp')"
+        'home-bg' : "url('/src/assets/home.webp')",
+        'about-bg' : "url('/src/assets/about.png')"
       },
 
       fontSize : {

@@ -54,6 +54,11 @@ main{
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+.container-l{
+  width: 95%;
+  margin: 0 auto;
+}
 </style>
 <script>
 import TheNavbar from "@/components/layout/TheNavbar";
@@ -65,7 +70,7 @@ export default {
   components: {TheFooter, TheNavbar},
   computed: {
     navbarClass() {
-      if (this.$route.path === '/') {
+      if (this.$route.path === '/' || this.$route.path === '/about') {
         return 'positionAbsolute'
       }
     }
