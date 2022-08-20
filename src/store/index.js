@@ -10,7 +10,8 @@ export default createStore({
         partners : partners,
         footer : footer,
         about : about,
-        portfolio : portfolio
+        portfolio : portfolio,
+        isLoading : true
     },
     getters: {
         services(state) {
@@ -30,9 +31,20 @@ export default createStore({
         },
         portfolio(state){
             return state.portfolio
+        },
+        isLoading(state){
+            return state.isLoading
         }
     },
-    mutations: {},
-    actions: {},
+    mutations: {
+        setLoading(state, payload){
+            state.isLoading = payload
+        }
+    },
+    actions: {
+        setLoad(context, payload){
+            context.commit("setLoading", payload)
+        }
+    },
     modules: {}
 })

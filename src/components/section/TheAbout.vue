@@ -21,6 +21,9 @@ export default {
     return{
       about
     }
+  },
+  mounted() {
+    this.$store.dispatch('setLoad', false)
   }
 }
 </script>

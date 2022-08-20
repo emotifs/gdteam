@@ -1,4 +1,5 @@
 <template>
+  <TheLoader v-if="this.$store.getters.isLoading === true"></TheLoader>
   <main>
     <TheNavbar :class="navbarClass"/>
     <router-view></router-view>

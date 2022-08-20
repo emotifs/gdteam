@@ -23,6 +23,9 @@ export default {
         behavior: "smooth"
       });
     }
+  },
+  mounted() {
+    this.$store.dispatch('setLoad', false)
   }
 }
 </script>
