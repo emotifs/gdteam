@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage : {
         'home-bg' : "url('/src/assets/home.webp')",
-        'about-bg' : "url('/src/assets/about.png')"
+        'about-bg' : "url('/src/assets/about.webp')"
       },
 
       fontSize : {

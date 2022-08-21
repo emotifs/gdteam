@@ -13,22 +13,22 @@
     "web": {
       "name": "Web Development",
       "description": "Creative web sites...",
-      "bg" : "/assets/web.png"
+      "bg" : "/assets/web.webp"
     },
     "design": {
       "name": "Graphic Design",
       "description": "Logo Branding, Social media designs..",
-      "bg" : "/assets/design.png"
+      "bg" : "/assets/design.webp"
     },
     "smm": {
       "name": "Social media marketing",
       "description": "Telegram bot, instagram...",
-      "bg" : "/assets/smm.png"
+      "bg" : "/assets/smm.webp"
     },
     "more": {
       "name": "More",
       "description": "Others...",
-      "bg" : "/assets/others.png"
+      "bg" : "/assets/others.webp"
     }
   },
   "partners": {
@@ -69,39 +69,39 @@
     "title" : "Portfolio",
     "1" : {
       "id" : 1,
-      "url" : "/assets/1.png"
+      "url" : "/assets/1.webp"
     },
     "2" : {
       "id" : 2,
-      "url" : "/assets/2.png"
+      "url" : "/assets/2.webp"
     },
     "3" : {
       "id" : 3,
-      "url" : "/assets/3.png"
+      "url" : "/assets/3.webp"
     },
     "4" : {
       "id" : 4,
-      "url" : "/assets/4.png"
+      "url" : "/assets/4.webp"
     },
     "5" : {
       "id" : 5,
-      "url" : "/assets/5.png"
+      "url" : "/assets/5.webp"
     },
     "6" : {
       "id" : 6,
-      "url" : "/assets/6.png"
+      "url" : "/assets/6.webp"
     },
     "7" : {
       "id" : 7,
-      "url" : "/assets/7.png"
+      "url" : "/assets/7.webp"
     },
     "8" : {
       "id" : 8,
-      "url" : "/assets/8.png"
+      "url" : "/assets/8.webp"
     },
     "9" : {
       "id" : 9,
-      "url" : "/assets/9.png"
+      "url" : "/assets/9.webp"
     }
   }
 }
