@@ -3,7 +3,7 @@
     <div class="w-full mx-auto flex flex-wrap items-center justify-between">
       <div class="w-full relative flex justify-between lg:w-auto  px-2 lg:static lg:block lg:justify-start">
         <button
-            class="text-white w-14 border-none outline-0 static lg:absolute lg:left-10 text-xl leading-none px-3 py-1 rounded bg-transparent block outline-none focus:outline-none"
+            class="text-white w-14 border-none outline-0 static lg:absolute lg:left-10 lg:top-10 text-xl leading-none px-3 py-1 rounded bg-transparent block outline-none focus:outline-none"
             type="button" v-on:click="toggleNavbar">
           <img src="../../assets/hamburger.png" alt="" v-if="!showMenu">
           <i v-if="showMenu" class="fa-solid fa-xmark fa-2x"></i>
@@ -12,15 +12,17 @@
                      class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white block lg:hidden xl:hidden">
           <img src="../../assets/logo.png" class="w-40 block " alt="">
         </router-link>
-        <select
-            class="bg-white text-black border-none outline-0 h-8 w-12 mt-4  lg:absolute lg:right-10"
-            v-model="$i18n.locale"
-            @change="onChangeLocal"
-        >
-          <option class="text-black" value="uz">UZ</option>
-          <option class="text-black"  value="ru">RU</option>
-          <option class="text-black" value="en">EN</option>
-        </select>
+        <div class="lang-edit">
+          <select
+              class="bg-white text-black border-none outline-0 h-8 w-12 lg:absolute lg:top-10  lg:right-10 rounded"
+              v-model="$i18n.locale"
+              @change="onChangeLocal"
+          >
+            <option class="text-black" value="uz">UZ</option>
+            <option class="text-black"  value="ru">RU</option>
+            <option class="text-black" value="en">EN</option>
+          </select>
+        </div>
       </div>
       <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu }" class="lg:flex lg:flex-grow items-center w-screen">
         <ul class="flex flex-col lg:flex-row list-none lg:mx-auto bg-black w-full h-screen lg:w-max lg:h-max lg:bg-transparent  z-50">
@@ -116,5 +118,16 @@ export default {
   option:hover{
     background-color: #2c3e50!important;
     color: #fff;
+  }
+
+  .lang-edit{
+    margin-top : 0
+  }
+
+  @media(max-width: 1200px){
+    .lang-edit{
+      margin-top: 1.5rem
+    }
+
   }
 </style>
