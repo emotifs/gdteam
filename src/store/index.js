@@ -11,7 +11,8 @@ export default createStore({
         footer : footer,
         about : about,
         portfolio : portfolio,
-        isLoading : true
+        isLoading : true,
+        isNavbarClose : false
     },
     getters: {
         services(state) {

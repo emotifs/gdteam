@@ -1,38 +1,56 @@
 [
   {
     "id" : "portfolio.1.id",
-    "url" : "portfolio.1.url"
+    "url" : "portfolio.1.url",
+    "title" : "portfolio.1.title",
+    "body" : "portfolio.1.body"
   },
   {
     "id" : "portfolio.2.id",
-    "url" : "portfolio.2.url"
+    "url" : "portfolio.2.url",
+    "title" :  "portfolio.2.title",
+    "body" :  "portfolio.2.body"
   },
   {
     "id" : "portfolio.3.id",
-    "url" : "portfolio.3.url"
+    "url" : "portfolio.3.url",
+    "title" :  "portfolio.3.title",
+    "body" :  "portfolio.3.body"
   },
   {
     "id" : "portfolio.4.id",
-    "url" : "portfolio.4.url"
+    "url" : "portfolio.4.url",
+    "title" :  "portfolio.4.title",
+    "body" :  "portfolio.4.body"
   },
   {
     "id" : "portfolio.5.id",
-    "url" : "portfolio.5.url"
+    "url" : "portfolio.5.url",
+    "title" :  "portfolio.5.title",
+    "body" :  "portfolio.5.body"
   },
   {
     "id" : "portfolio.6.id",
-    "url" : "portfolio.6.url"
+    "url" : "portfolio.6.url",
+    "title" :  "portfolio.6.title",
+    "body" :  "portfolio.6.body"
   },
   {
     "id" : "portfolio.7.id",
-    "url" : "portfolio.7.url"
+    "url" : "portfolio.7.url",
+    "title" :  "portfolio.7.title",
+    "body" :  "portfolio.7.body"
   },
   {
     "id" : "portfolio.8.id",
-    "url" : "portfolio.8.url"
+    "url" : "portfolio.8.url",
+    "title" :  "portfolio.8.title",
+    "body" :  "portfolio.8.body"
   },
   {
     "id" : "portfolio.9.id",
-    "url" : "portfolio.9.url"
+    "url" : "portfolio.9.url",
+    "title" :  "portfolio.9.title",
+    "body" :  "portfolio.9.body"
   }
 ]

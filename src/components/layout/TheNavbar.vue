@@ -21,18 +21,18 @@
           <option class="text-black" value="en">EN</option>
         </select>
       </div>
-      <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center w-screen ">
-        <ul class="flex flex-col lg:flex-row list-none lg:mx-auto bg-black lg:bg-transparent z-50">
+      <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu }" class="lg:flex lg:flex-grow items-center w-screen ">
+        <ul class="flex flex-col lg:flex-row list-none lg:mx-auto bg-black w-full h-screen lg:w-max lg:h-max lg:bg-transparent z-50">
           <li class="nav-item mx-5 py-2">
             <router-link to="/"
-                         class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline">
-              <span class="ml-2" style="font-size: 18px">{{ $t('nav.home') }}</span>
+                         class="px-3 py-2 flex items-center text-md lg:text-xs uppercase font-bold leading-snug text-white hover:opacity-75 no-underline">
+              <span class="ml-2" style="font-size: 18px"><i class="fa-sharp fa-solid fa-house mr-2 inline lg:hidden"></i>{{ $t('nav.home') }}</span>
             </router-link>
           </li>
           <li class="nav-item mx-5 py-2">
             <router-link to="/about"
-                         class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-              <span class="ml-2" style="font-size: 18px">{{ $t('nav.about') }}</span>
+                         class="px-3 py-2 flex items-center text-md lg:text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+              <span class="ml-2" style="font-size: 18px"><i class="fa-solid fa-circle-info mr-2 inline lg:hidden"></i>{{ $t('nav.about') }}</span>
             </router-link>
           </li>
           <router-link to="/"
@@ -41,15 +41,15 @@
           </router-link>
           <li class="nav-item mx-5 py-2">
             <router-link to="/portfolio"
-                         class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-              <span class="ml-2" style="font-size: 18px">{{ $t('nav.portfolio') }}</span>
+                         class="px-3 py-2 flex items-center text-md lg:text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+              <span class="ml-2" style="font-size: 18px"><i class="fa-solid fa-briefcase mr-2 inline lg:hidden"></i>{{ $t('nav.portfolio') }}</span>
             </router-link>
           </li>
 
           <li class="nav-item mx-5 py-2">
             <a href="https://t.me/s/gdteamuz" target="_blank"
-                         class="px-3 py-2 flex items-center text-xs  uppercase font-bold leading-snug text-white hover:opacity-75">
-              <span class="ml-2" style="font-size: 18px">{{ $t('nav.news') }}</span>
+                         class="px-3 py-2 flex items-center text-md lg:text-xs  uppercase font-bold leading-snug text-white hover:opacity-75">
+              <span class="ml-2" style="font-size: 18px"><i class="fa-regular fa-newspaper mr-2 inline lg:hidden"></i>{{ $t('nav.news') }}</span>
             </a>
           </li>
 
@@ -65,11 +65,13 @@ import {ref} from 'vue'
 import {useI18n} from 'vue-i18n';
 export default {
   name: "TheNavbar",
-  setup() {
+  props : ['isClose'],
+  setup(props) {
     const i18n = useI18n;
     const {t} = useI18n({
       i18n
     })
+
     const showMenu = ref(false)
     const onChangeLocal = (e) => {
       localStorage.setItem('lang', e.target.value)
@@ -93,8 +95,13 @@ export default {
     if (localStorage.getItem("lang")) {
       this.$i18n.locale = localStorage.getItem("lang")
     }
-  }
+  },
 
+  watch: {
+    '$route' () {
+      this.showMenu = false
+    }
+  },
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <TheLoader v-if="this.$store.getters.isLoading === true"></TheLoader>
   <main>
-    <TheNavbar :class="navbarClass"/>
+    <TheNavbar :class="navbarClass" :close="isClose"/>
     <router-view></router-view>
     <TheFooter/>
   </main>
@@ -13,6 +13,7 @@
   src: local("Gilroy"),
   url("./assets/fonts/Gilroy-Medium.ttf") format("truetype");
 }
+
 * {
   font-family: 'Gilroy', sans-serif;
   margin: 0;
@@ -33,7 +34,7 @@
 
 }
 
-main{
+main {
   width: 100%;
   height: 100vh;
   background: #000;
@@ -46,17 +47,19 @@ main{
   left: 0;
   background-color: transparent;
 }
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-.container-l{
+.container-l {
   width: 95%;
   margin: 0 auto;
 }
@@ -69,6 +72,11 @@ import AOS from "aos";
 
 export default {
   components: {TheFooter, TheNavbar},
+  data() {
+    return {
+      isClose: false
+    }
+  },
   computed: {
     navbarClass() {
       if (this.$route.path === '/' || this.$route.path === '/about') {
@@ -77,16 +85,17 @@ export default {
     }
   },
 
-  mounted(){
+  mounted() {
+    this.$store.state.isNavbarClose = false
     AOS.init()
   },
-  methods : {
-    start(){
+  methods: {
+    start() {
       let docWidth = document.documentElement.offsetWidth;
 
       [].forEach.call(
           document.querySelectorAll('*'),
-          function(el) {
+          function (el) {
             if (el.offsetWidth > docWidth) {
               console.log(el);
             }

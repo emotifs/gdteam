@@ -69,39 +69,57 @@
     "title" : "Portfolio",
     "1" : {
       "id" : 1,
-      "url" : "/assets/1.webp"
+      "url" : "/assets/1.webp",
+      "title" : "Impact Learning centre",
+      "body" : "smm"
     },
     "2" : {
       "id" : 2,
-      "url" : "/assets/2.webp"
+      "url" : "/assets/2.webp",
+      "title" : "Training",
+      "body" : ""
     },
     "3" : {
       "id" : 3,
-      "url" : "/assets/3.webp"
+      "url" : "/assets/3.webp",
+      "title" : "Design",
+      "body" :  "manipulation"
     },
     "4" : {
       "id" : 4,
-      "url" : "/assets/4.webp"
+      "url" : "/assets/4.webp",
+      "title" : "TEDEdClub",
+      "body" :  "project management"
     },
     "5" : {
       "id" : 5,
-      "url" : "/assets/5.webp"
+      "url" : "/assets/5.webp",
+      "title" : "Branding",
+      "body" :  "TEDEdClub"
     },
     "6" : {
       "id" : 6,
-      "url" : "/assets/6.webp"
+      "url" : "/assets/6.webp",
+      "title" : "Uch Baqaloq",
+      "body" :  "Restaurant"
     },
     "7" : {
       "id" : 7,
-      "url" : "/assets/7.webp"
+      "url" : "/assets/7.webp",
+      "title" : "TEDEdClub",
+      "body" :  "media"
     },
     "8" : {
       "id" : 8,
-      "url" : "/assets/8.webp"
+      "url" : "/assets/8.webp",
+      "title" : "Design",
+      "body" :  "manipulation"
     },
     "9" : {
       "id" : 9,
-      "url" : "/assets/9.webp"
+      "url" : "/assets/9.webp",
+      "title" : "TEDEdClub",
+      "body" :  "smm"
     }
   }
 }

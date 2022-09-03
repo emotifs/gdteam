@@ -25,7 +25,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('setLoad', false)
+      this.$store.dispatch('setLoad', false)
   }
 }
 </script>

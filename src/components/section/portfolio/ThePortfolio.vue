@@ -7,15 +7,19 @@
      </h1>
 
      <div class="grid-cols-3 space-y-2 lg:space-y-0 lg:gap-3 lg:grid relative">
-       <div class="w-full" v-for="(item, idx) in portfolio" :key="item.id" :class="[idx + 1 === 1 || idx + 1 === 6 ? 'col-span-2' : '', idx + 1 === 3 ? 'row-span-2' : '']">
-         <img :src="require('.' + $t(item.url))" alt="" @load="onImgLoad">
+       <div class="w-full relative" v-for="(item, idx) in portfolio" :key="item.id" :class="[idx + 1 === 1 || idx + 1 === 6 ? 'col-span-2' : '', idx + 1 === 3 ? 'row-span-2' : '']">
+         <img class="por-image" :src="require('.' + $t(item.url))" alt="" @load="onImgLoad">
+         <div class="absolute  left-0 w-full top-1/2 mx-auto z-50 descr">
+            <h1 class="text-center text-4xl font-bold">{{$t(item.title)}}</h1>
+           <p class="text-center text-2xl">{{$t(item.body)}}</p>
+         </div>
        </div>
      </div>
    </div>
 
   <div class="flex justify-center mt-5">
-    <h1 class="text-xl mt-1 mr-2"> To be continued</h1>
-    <svg class="w-12" version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <h1 class="text-2xl mt-2 mr-2"> To be continued</h1>
+    <svg class="w-14" version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
   <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
     <animate
@@ -74,4 +78,25 @@ export default {
 </script>
 
 <style scoped>
+.por-image{
+}
+
+.descr{
+  display: none;
+  pointer-events: none;
+}
+.por-image:hover{
+  filter: blur(15px);
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.por-image:hover ~ .descr{
+  display: block;
+}
+
+/*.descr:hover{*/
+
+/*  display: none;*/
+/*}*/
 </style>
