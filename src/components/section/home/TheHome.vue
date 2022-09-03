@@ -5,6 +5,7 @@
       <div @click="scroll('services')" class="hover:cursor-pointer icon-scroll"></div>
     </section>
     <HomeServices/>
+    <HomeTeam />
     <HomePartners />
   </div>
 </template>
@@ -13,10 +14,11 @@
 import HomeHeader from "@/components/section/home/HomeHeader";
 import HomeServices from "@/components/section/home/HomeServices";
 import HomePartners from "@/components/section/home/HomePartners";
+import HomeTeam from "@/components/section/home/HomeTeam";
 
 export default {
   name: "TheHome",
-  components: {HomePartners, HomeServices, HomeHeader},
+  components: {HomeTeam, HomePartners, HomeServices, HomeHeader},
   methods : {
     scroll(id) {
       document.getElementById(id).scrollIntoView({
