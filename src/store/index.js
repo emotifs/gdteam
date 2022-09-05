@@ -11,6 +11,7 @@ export default createStore({
         footer : footer,
         about : about,
         portfolio : portfolio,
+        isLoading : true,
         isNavbarClose : false
     },
     getters: {
@@ -32,6 +33,9 @@ export default createStore({
         portfolio(state){
             return state.portfolio
         },
+        isLoading(state){
+            return state.isLoading
+        }
     },
     mutations: {
         setLoading(state, payload){

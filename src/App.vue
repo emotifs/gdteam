@@ -1,6 +1,6 @@
 <template>
-  <TheLoader />
-  <main>
+  <TheLoader v-if="this.$store.getters.isLoading"/>
+  <main v-else>
     <TheNavbar :class="navbarClass" :close="isClose"/>
     <router-view></router-view>
     <TheFooter/>
@@ -75,7 +75,7 @@ export default {
   data() {
     return {
       isClose: false,
-      isLoading : true
+      isLoading : this.$store.getters.isLoading
     }
   },
   computed: {
@@ -88,7 +88,9 @@ export default {
 
   mounted() {
     this.$store.state.isNavbarClose = false
+    this.closeLoad()
     AOS.init()
+
   },
   methods: {
     start() {
@@ -102,8 +104,13 @@ export default {
             }
           }
       );
-
+    },
+    closeLoad(){
+      setTimeout(() => {
+        this.$store.state.isLoading = false
+      }, 2000)
     }
+
   },
 
 }
