@@ -1,6 +1,6 @@
 <template>
 
-  <section>
+  <section v-if="show">
 
     <div class="loading-mask" data-role="loader">
       <div class="wrapper">
@@ -23,7 +23,24 @@
 
 <script>
 export default {
-  name: "TheLoader"
+  name: "TheLoader",
+  data(){
+    return {
+      show : true
+    }
+  },
+
+  mounted() {
+    this.showToggle()
+  },
+
+  methods : {
+    showToggle(){
+      setTimeout(() => {
+        this.show = false
+      }, 1000)
+    }
+  }
 }
 </script>
 

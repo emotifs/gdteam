@@ -1,5 +1,5 @@
 <template>
-  <TheLoader v-if="this.$store.getters.isLoading === true"></TheLoader>
+  <TheLoader />
   <main>
     <TheNavbar :class="navbarClass" :close="isClose"/>
     <router-view></router-view>
@@ -74,7 +74,8 @@ export default {
   components: {TheFooter, TheNavbar},
   data() {
     return {
-      isClose: false
+      isClose: false,
+      isLoading : true
     }
   },
   computed: {
@@ -103,6 +104,7 @@ export default {
       );
 
     }
-  }
+  },
+
 }
 </script>
