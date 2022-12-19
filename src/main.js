@@ -6,6 +6,7 @@ import './assets/tailwind.css'
 import i18n from './locales/i18n'
 import 'aos/dist/aos.css'
 import 'animate.css'
+import 'vue3-carousel/dist/carousel.css'
 import SectionHeader from "@/components/elements/SectionHeader";
 import Skeleton from 'vue-loading-skeleton';
 import "vue-loading-skeleton/dist/style.css"
