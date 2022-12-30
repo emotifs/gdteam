@@ -1,6 +1,7 @@
 <template>
+  <base-header title="Team" class="mt-20" size="24px"></base-header>
   <Carousel
-      class="carousel__container"
+      class="carousel__container mt-lg-5"
       :itemsToShow="2"
       :wrapAround="true"
       :transition="100"
@@ -14,16 +15,26 @@
         }
       }"
   >
-    <Slide v-for="member in team" :key="member.id">
+    <Slide v-for="member in team" :key="member.id" style="margin-bottom: 50px">
         <div class="carousel__item" :style="{'background-image' : `linear-gradient(45deg, #000, rgba(0, 0, 0, 0.2)), url(${member.image})`}">
         <div class="item">
-          <h3 class="name">{{ member.full_name }}</h3>
+          <h5 class="job">{{member.job_type}}</h5>
+          <div class="inner-item">
+            <h3 class="name">{{ member.full_name }}</h3>
+            <div class="icons">
+              <a v-if="member.telegram" :href="member.telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+              <a v-if="member.instagram" :href="member.instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a v-if="member.twitter" :href="member.twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a v-if="member.facebook" :href="member.facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a v-if="member.linkedin" :href="member.linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </Slide>
     <template #addons>
-    <Pagination />
-    <Navigation />
+    <Pagination/>
+    <Navigation style="color: #000" />
   </template>
 
   </Carousel>
@@ -58,7 +69,7 @@ export default defineComponent({
         id : 2,
         full_name : 'Dilbek Alimurodov',
         image: 'https://www.ultimatebeaver.com/wp-content/uploads/2021/04/photo-gallery-img-02.jpg',
-        job_type : 'Front End Dev',
+        job_type : 'FrontEnd',
         telegram : 'https://t.me/emotifs',
         instagram : 'https://instagram.com/emotifs_',
       },
@@ -75,7 +86,7 @@ export default defineComponent({
         id : 4,
         full_name : 'Muhammadjon Muhammedov',
         image: 'https://salahineo.github.io/Stocker/images/team4.jpg',
-        job_type : 'Back End Dev',
+        job_type : 'BackEnd ',
         telegram : 'https://t.me/emotifs',
         linkedin : 'https://linkedin.com'
       },
@@ -84,7 +95,7 @@ export default defineComponent({
         id : 5,
         full_name : 'Kimdur Kimdurov',
         image: 'https://salahineo.github.io/Stocker/images/team4.jpg',
-        job_type : 'Back End Dev',
+        job_type : 'BackEnd',
         telegram : 'https://t.me/emotifs',
         linkedin : 'https://linkedin.com'
       },
@@ -93,7 +104,7 @@ export default defineComponent({
         id : 6,
         full_name : 'Kimdur1 Kimdurov',
         image: 'https://salahineo.github.io/Stocker/images/team4.jpg',
-        job_type : 'Back End Dev',
+        job_type : 'BackEnd',
         telegram : 'https://t.me/emotifs',
         linkedin : 'https://linkedin.com'
       }
@@ -107,6 +118,32 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+
+.inner-item{
+  width: 100%;
+  //margin: 0 auto;
+  position: absolute;
+  bottom: 40px;
+
+
+  .name{
+    letter-spacing: 0.7px;
+    color: #fff;
+  }
+
+  .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    a{
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+}
+
 .carousel__item{
   background-image: linear-gradient(rgba(69, 71, 80, 0.8), rgba(24, 23, 23, 0.8));
   background-size: cover;
@@ -115,15 +152,27 @@ export default defineComponent({
   border-radius: 12px!important;
   width : 100%;
   min-height: 460px;
-  padding: 50px;
+  //padding: 50px;
   position: relative;
+  box-shadow: 0px 10px 30px -20px #fff;
 
   .name{
     color: #fff;
-    position: absolute;
-    bottom: 100px;
     text-align: center;
     font-size: 18px;
+  }
+
+  .job{
+    position: absolute;
+    top: 0;
+    left: -40px;
+    top: 45px;
+    transform: rotate(-90deg);
+    background: #fff;
+    padding: 10px 20px;
+    color: #000;
+    letter-spacing: 1.5px;
+    border-radius: 12px;
   }
 }
 

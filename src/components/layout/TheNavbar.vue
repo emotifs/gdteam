@@ -120,6 +120,10 @@ export default {
     color: #fff;
   }
 
+  .lang-edit:hover{
+    color: red;
+  }
+
   .lang-edit{
     margin-top : 0
   }
