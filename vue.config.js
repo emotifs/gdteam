@@ -12,5 +12,9 @@ module.exports = defineConfig({
       compositionOnly: false,
       fullInstall: true
     }
+  },
+
+  devServer: {
+    proxy: 'https://pvoivevmjk.pythonanywhere.com/api/v1/',
   }
 })

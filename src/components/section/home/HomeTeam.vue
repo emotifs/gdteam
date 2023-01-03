@@ -1,8 +1,9 @@
 <template>
   <base-header title="Team" class="mt-20" size="24px"></base-header>
   <Carousel
+      v-if="team.length"
       class="carousel__container mt-lg-5"
-      :itemsToShow="2"
+      :itemsToShow="1"
       :wrapAround="true"
       :transition="100"
       :autoplay="5000"
@@ -41,8 +42,9 @@
 </template>
 
 <script>
-import {defineComponent, reactive} from 'vue'
+import {defineComponent, reactive, ref} from 'vue'
 import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel'
+import axios from "axios";
 
 export default defineComponent({
   name: 'HomeTeam',
@@ -54,62 +56,15 @@ export default defineComponent({
   },
 
   setup(){
-    const team = reactive([
-      {
-        id : 1,
-        full_name : 'Mirzohid Abbdurazzaqov',
-        image : 'https://images.unsplash.com/photo-1597204081767-4c14a6b7cbec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2luZ2xlJTIwcGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-        job_type : 'Manager',
-        linkedin : 'https://linkedin.com',
-        telegram : 'https://t.me/emotifs',
-        instagram : 'https://instagram.com/emotifs_',
-        twitter : 'https://twitter.com'
-      },
-      {
-        id : 2,
-        full_name : 'Dilbek Alimurodov',
-        image: 'https://www.ultimatebeaver.com/wp-content/uploads/2021/04/photo-gallery-img-02.jpg',
-        job_type : 'FrontEnd',
-        telegram : 'https://t.me/emotifs',
-        instagram : 'https://instagram.com/emotifs_',
-      },
-      {
-        id : 3,
-        full_name : 'Dilmurod Dadaboyev',
-        image: 'https://lulebora.al/wp-content/uploads/2018/11/h1-team-img-4.jpg',
-        job_type : 'Designer',
-        telegram : 'https://t.me/emotifs',
-        linkedin : 'https://linkedin.com',
-        instagram : 'https://instagram.com/emotifs_',
-      },
-      {
-        id : 4,
-        full_name : 'Muhammadjon Muhammedov',
-        image: 'https://salahineo.github.io/Stocker/images/team4.jpg',
-        job_type : 'BackEnd ',
-        telegram : 'https://t.me/emotifs',
-        linkedin : 'https://linkedin.com'
-      },
-
-      {
-        id : 5,
-        full_name : 'Kimdur Kimdurov',
-        image: 'https://salahineo.github.io/Stocker/images/team4.jpg',
-        job_type : 'BackEnd',
-        telegram : 'https://t.me/emotifs',
-        linkedin : 'https://linkedin.com'
-      },
-
-      {
-        id : 6,
-        full_name : 'Kimdur1 Kimdurov',
-        image: 'https://salahineo.github.io/Stocker/images/team4.jpg',
-        job_type : 'BackEnd',
-        telegram : 'https://t.me/emotifs',
-        linkedin : 'https://linkedin.com'
-      }
-    ])
-
+    const team = ref([])
+    axios.get('/main/team-member/')
+      .then(response => {
+        team.value = response.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    console.log('team', team)
     return{
       team
     }
@@ -165,14 +120,14 @@ export default defineComponent({
   .job{
     position: absolute;
     top: 0;
-    left: -40px;
-    top: 45px;
+    left: 0;
     transform: rotate(-90deg);
     background: #fff;
     padding: 10px 20px;
     color: #000;
     letter-spacing: 1.5px;
     border-radius: 12px;
+    box-sizing: border-box;
   }
 }
 

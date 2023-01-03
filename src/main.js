@@ -10,12 +10,15 @@ import 'vue3-carousel/dist/carousel.css'
 import SectionHeader from "@/components/elements/SectionHeader";
 import Skeleton from 'vue-loading-skeleton';
 import "vue-loading-skeleton/dist/style.css"
+import axios from "axios";
 import TheLoader from "@/components/layout/TheLoader";
 const app = createApp(App)
 store.i18n = i18n
 app.use(i18n)
 app.use(store)
-app.use(router)
+app.use(router, axios)
+
+axios.defaults.baseURL = "https://pvoivevmjk.pythonanywhere.com/api/v1"
 app.use(Skeleton)
 app.component('base-header', SectionHeader)
 app.component("TheLoader", TheLoader)

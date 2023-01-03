@@ -50,10 +50,10 @@
           </li>
 
           <li class="nav-item mx-5 py-2">
-            <a href="https://t.me/s/gdteamuz" target="_blank"
+            <router-link to="/news"
                          class="px-3 py-2 flex items-center text-md lg:text-xs  uppercase font-bold leading-snug text-white hover:opacity-75">
               <span class="ml-2" style="font-size: 18px"><i class="fa-regular fa-newspaper mr-2 inline lg:hidden"></i>{{ $t('nav.news') }}</span>
-            </a>
+            </router-link>
           </li>
 
 
