@@ -91,6 +91,7 @@ export default {
     this.closeLoad()
     AOS.init()
 
+
   },
   methods: {
     start() {

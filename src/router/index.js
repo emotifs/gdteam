@@ -11,6 +11,7 @@ const routes = [
     {name: 'about', path: '/about', component: TheAbout},
     {name: 'portfolio', path: '/portfolio', component: ThePortfolio},
     {name: 'news', path: '/news', component: TheNews},
+    {name: 'newsDetail', path: '/news/:id', props : true, component: () => import('@/components/section/NewsDetail')},
 
 ]
 
