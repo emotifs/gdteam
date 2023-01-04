@@ -109,7 +109,7 @@ export default {
     closeLoad(){
       setTimeout(() => {
         this.$store.state.isLoading = false
-      }, 2000)
+      }, 1000)
     }
 
   },

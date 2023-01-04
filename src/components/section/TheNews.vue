@@ -1,8 +1,9 @@
 <template>
-  <div class="body">
+  <TheLoader v-if="isLoading"/>
+  <div class="body" v-if="!isLoading">
     <div class="news__container container">
       <div class="news" v-for="(news, idx) in news" :key="news.id">
-        <router-link :to="`/news/${news.id}`" class="news__item flex flex-row">
+        <router-link :to="`/news/${news.id}`" class="news__item flex flex-row" :id="news.id">
           <img :src="news.image" alt="" v-if="idx % 2 === 0">
           <div class="news__item__content">
             <h3 class="news__item__title">{{news.title}}</h3>
@@ -19,22 +20,27 @@
 <script>
 import {ref} from "vue";
 import axios from "axios";
+import TheLoader from "@/components/layout/TheLoader";
 
 export default {
   name: "TheNews",
+  components: {TheLoader},
   setup(){
     const news = ref([])
+    const isLoading = ref(true)
 
     axios.get('main/blog/')
       .then(res => {
         news.value = res.data
+        isLoading.value = false
       })
       .catch(err => {
         console.log(err)
       })
 
     return{
-      news
+      news,
+      isLoading
     }
   },
 }

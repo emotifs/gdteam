@@ -1,5 +1,6 @@
 <template>
-  <div class="body">
+  <TheLoader v-if="isLoading"/>
+  <div class="body" v-else="!isLoading">
     <div class="container">
       <div class="news__detail">
         <div class="news__detail__title text-center text-2xl my-5 font-bold">
@@ -21,25 +22,34 @@
 <script>
 import axios from "axios";
 import {ref} from "vue";
+import TheLoader from "@/components/layout/TheLoader";
 
 export default {
   name: "NewsDetail",
+  components: {TheLoader},
   props : [
       'id'
   ],
   setup(props) {
+    const isLoading = ref(true)
     window.scrollTo(0, 0);
     let news = ref([]);
+    if(!props.id){
+      console.log('props', props)
+    }
     axios.get('main/blog/' + props.id)
       .then(res => {
+        console.log(res)
         news.value = res.data;
+        isLoading.value = false
       })
       .catch(err => {
         console.log(err)
       })
     console.log(props.id)
     return {
-      news
+      news,
+      isLoading
     };
   },
 }
