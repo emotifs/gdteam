@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-black text-white footer" style="font-size: 18px">
+  <footer class="bg-black text-white footer " style="font-size: 18px">
     <div class="bg-black py-5"></div>
     <div class="cont bg-black shadow-white shadow-2xl py-5 ">
       <div style="width: 95%" class="mx-auto">

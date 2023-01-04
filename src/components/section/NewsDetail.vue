@@ -28,6 +28,7 @@ export default {
       'id'
   ],
   setup(props) {
+    window.scrollTo(0, 0);
     let news = ref([]);
     axios.get('main/blog/' + props.id)
       .then(res => {
@@ -46,7 +47,7 @@ export default {
 
 <style scoped lang="scss">
   .body{
-    height: 100vh;
+    height: 100%;
     background-color: #000;
   }
 

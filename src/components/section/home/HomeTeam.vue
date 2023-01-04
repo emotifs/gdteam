@@ -17,9 +17,9 @@
       }"
   >
     <Slide v-for="member in team" :key="member.id" style="margin-bottom: 50px">
-        <div class="carousel__item" :style="{'background-image' : `linear-gradient(45deg, #000, rgba(0, 0, 0, 0.2)), url(${member.image})`}">
+        <div class="carousel__item" :style="{'background-image' : `linear-gradient(45deg, #000, rgba(0, 0, 0, 0.1)), url(${member.image})`}">
         <div class="item">
-          <h5 class="job">{{member.job_type}}</h5>
+<!--          <h5 class="job">{{member.job_type}}</h5>-->
           <div class="inner-item">
             <h3 class="name">{{ member.full_name }}</h3>
             <div class="icons">
@@ -100,7 +100,7 @@ export default defineComponent({
 }
 
 .carousel__item{
-  background-image: linear-gradient(rgba(69, 71, 80, 0.8), rgba(24, 23, 23, 0.8));
+  //background-image: linear-gradient(rgba(69, 71, 80, 0.8), rgba(24, 23, 23, 0.8));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
