@@ -56,11 +56,13 @@ export default {
   .news{
     background-color: rgba(255, 255, 255, 0.16) !important;
     border-radius: 10px;
+    border:1px solid rgba(255, 255, 255, 0.52);
     padding: 20px;
     margin-top: 20px;
   }
   .news__item{
     height: 300px;
+
     &:hover{
       color: #fff;
     }
